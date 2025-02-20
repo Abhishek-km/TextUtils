@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import Textform from './Components/Textform';
 import About from './Components/About';
+import Alert from './Components/Alert';
 
 import React, {useState} from 'react';
 
@@ -13,20 +14,33 @@ function App() {
     if(appMode === 'light'){
       setappMode('dark');
       document.body.style.backgroundColor = '#042743';
-      console.log('Dark mode has been enabled');
+      showAlert("Dark mode has been enabled", "success");
     }
     else{
       setappMode('light');
       document.body.style.backgroundColor = 'white';
-      console.log('light mode has been enabled');
+      showAlert("Light mode has been enabled", "success");
     }
   }
+
+  const [alert, setAlert] = useState(null);
+  const showAlert = (message, type) => {
+    setAlert({
+      msg: message,
+      type: type
+    })
+    setTimeout(() => {
+      setAlert(null);
+    }, 1500);
+  }
+
   return (
  <>
  <Navbar toggleMode={toggleMode} appMode={appMode}/>
+  <Alert alert={alert}/>
  <div className="container my-3">
- <Textform  heading = "Enter your text to analyize" appMode={appMode}/>
- <About />
+ <Textform  heading = "Enter your text to analyize" appMode={appMode}  showAlert={showAlert}/>
+ <About appMode={appMode}/>
   </div>
  </>
   );

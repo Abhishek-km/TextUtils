@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-export default function About() {
+export default function About(props) {
   const [mode, setMode] = useState({
-    color: "black",
-    backgroundColor: "white",
+    color: props.appMode === "dark" ? "white" : "black",
+    backgroundColor: props.appMode === "dark" ? "black" : "white",
   });
 
   const [modeText, setModeText] = useState(
@@ -14,7 +14,7 @@ export default function About() {
     if (mode.color === "black") {
       setMode({
         color: "white",
-        backgroundColor: "black",
+        backgroundColor: "#042743",
       });
       setModeText("Enable Light Mode for About Section");
     } else {
@@ -25,6 +25,7 @@ export default function About() {
       setModeText("Enable Dark Mode for About Section");
     }
   };
+
   return (
     <div className="container" style={mode}>
       <h2>About TextUtils</h2>
@@ -40,7 +41,7 @@ export default function About() {
               aria-controls="collapseOne"
               style={mode}
             >
-              Accordion Item #1
+              <strong>What TextUtils is?</strong>
             </button>
           </h2>
           <div
@@ -50,14 +51,8 @@ export default function About() {
             style={mode}
           >
             <div className="accordion-body" style={mode}>
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              TextUtils is a utility to analyze your text quickly and efficiently. Be it word count, character count or
+              anything else you can think of.
             </div>
           </div>
         </div>
@@ -72,7 +67,7 @@ export default function About() {
               aria-controls="collapseTwo"
               style={mode}
             >
-              Accordion Item #2
+              <strong>Why it was developed?</strong>
             </button>
           </h2>
           <div
@@ -82,14 +77,8 @@ export default function About() {
             style={mode}
           >
             <div className="accordion-body" style={mode}>
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              TextUtils was developed to make the life of people easier. It was developed to help people analyze their
+              text easily and efficiently.
             </div>
           </div>
         </div>
@@ -104,7 +93,7 @@ export default function About() {
               aria-controls="collapseThree"
               style={mode}
             >
-              Accordion Item #3
+              <strong>Developer Info</strong>
             </button>
           </h2>
           <div
@@ -114,14 +103,8 @@ export default function About() {
             style={mode}
           >
             <div className="accordion-body" style={mode}>
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              TextUtils was developed by <strong>Abhishek Kumar</strong> on 19th Feb 2025. It was developed using
+              React.js.
             </div>
           </div>
         </div>
