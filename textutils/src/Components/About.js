@@ -26,6 +26,7 @@ export default function About(props) {
     }
   };
 
+  document.title = "TextUtils - About";
   return (
     <div className="container" style={mode}>
       <h2>About TextUtils</h2>
@@ -51,8 +52,9 @@ export default function About(props) {
             style={mode}
           >
             <div className="accordion-body" style={mode}>
-              TextUtils is a utility to analyze your text quickly and efficiently. Be it word count, character count or
-              anything else you can think of.
+              TextUtils is a utility to analyze your text quickly and
+              efficiently. Be it word count, character count or anything else
+              you can think of.
             </div>
           </div>
         </div>
@@ -77,8 +79,9 @@ export default function About(props) {
             style={mode}
           >
             <div className="accordion-body" style={mode}>
-              TextUtils was developed to make the life of people easier. It was developed to help people analyze their
-              text easily and efficiently.
+              TextUtils was developed to make the life of people easier. It was
+              developed to help people analyze their text easily and
+              efficiently.
             </div>
           </div>
         </div>
@@ -103,8 +106,8 @@ export default function About(props) {
             style={mode}
           >
             <div className="accordion-body" style={mode}>
-              TextUtils was developed by <strong>Abhishek Kumar</strong> on 19th Feb 2025. It was developed using
-              React.js.
+              TextUtils was developed by <strong>Abhishek Kumar</strong> on 19th
+              Feb 2025. It was developed using React.js.
             </div>
           </div>
         </div>
