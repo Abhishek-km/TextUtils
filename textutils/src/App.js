@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Textform from "./Components/Textform";
@@ -7,7 +6,7 @@ import Alert from "./Components/Alert";
 
 import React, { useState } from "react";
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [appMode, setappMode] = useState("light");
