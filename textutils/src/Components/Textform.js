@@ -108,7 +108,7 @@ export default function Textform(props) {
           words, {text.length} characters
         </p>
         <h3>Preview</h3>
-        <p>{text}</p>
+        <p>{text.length === 0 ? "Nothing to Preview yet" : text}</p>
       </div>
     </>
   );
