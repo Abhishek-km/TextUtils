@@ -52,41 +52,47 @@ export default function Textform(props) {
             onChange={handleOnChange}
             style={{
               background: props.appMode === "dark" ? "#042743" : "white",
+              color: props.appMode === "dark" ? "white" : "black",
             }}
           ></textarea>
         </div>
         <button
           type="button"
-          className="btn btn-primary mx-1"
+          className="btn btn-primary mx-1 my-1"
           onClick={handleUpperCase}
+          disabled={text.length === 0}
         >
           Convert to UpperCase
         </button>
         <button
           type="button"
-          className="btn btn-primary mx-1"
+          className="btn btn-primary mx-1 my-1"
           onClick={handleLowerCase}
+          disabled={text.length === 0}
         >
           Convert to LowerCase
         </button>
         <button
           type="button"
-          className="btn btn-primary mx-1"
+          className="btn btn-primary mx-1 my-1"
           onClick={handleClear}
+          disabled={text.length === 0}
         >
           Clear
         </button>
         <button
           type="button"
-          className="btn btn-primary mx-1"
+          className="btn btn-primary mx-1 my-1"
           onClick={handleCopy}
+          disabled={text.length === 0}
         >
           Copy Text
         </button>
         <button
           type="button"
-          className="btn btn-primary mx-1"
+          className="btn btn-primary mx-1 my-1"
           onClick={handleExtraSpaces}
+          disabled={text.length === 0}
         >
           Remove Extra spaces
         </button>

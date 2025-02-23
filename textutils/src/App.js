@@ -15,7 +15,7 @@ function App() {
       setappMode("dark");
       document.body.style.backgroundColor = "#042743";
       showAlert("Dark mode has been enabled", "success");
-      document.title = "TextUtils - Dark Mode";
+     // document.title = "TextUtils - Dark Mode";
 
       // to blink the website title
       // setInterval(() => {
@@ -30,7 +30,7 @@ function App() {
       setappMode("light");
       document.body.style.backgroundColor = "white";
       showAlert("Light mode has been enabled", "success");
-      document.title = "TextUtils - Light Mode";
+      //document.title = "TextUtils - Light Mode";
     }
   };
 
@@ -57,7 +57,7 @@ function App() {
               path="/"
               element={
                 <Textform
-                  heading="Enter your text to analyze"
+                  heading="Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces"
                   appMode={appMode}
                   showAlert={showAlert}
                 />
