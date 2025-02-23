@@ -27,6 +27,7 @@ export default function Textform(props) {
   const handleCopy = () => {
     navigator.clipboard.writeText(text);
     props.showAlert("Text Copied", "success");
+    document.getSelection().removeAllRanges();
   };
 
   const handleExtraSpaces = () => {
